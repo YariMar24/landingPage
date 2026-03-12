@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Macrolotes El Abra | Desarrollo de Cabañas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Montserrat", "sans-serif"],
+            },
+            colors: {
+              brand: {
+                accent: "#8B9D77", // Verde salvia suave
+                dark: "#070A07", // Verde bosque casi negro
+                surface: "#111711", // Tono de tarjetas
+                light: "#E8EBE6", // Blanco roto
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #070a07;
+        color: #e8ebe6;
+      } /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #070a07;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1f261f;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #8b9d77;
+      }
+    </style>
+  </head>
+  <body class="antialiased selection:bg-brand-accent selection:text-white">
+    <!-- Navegación Superior -->
+    <nav
+      class="absolute w-full top-0 z-50 px-6 py-8 md:px-12 flex flex-col md:flex-row justify-between items-center mix-blend-difference border-b border-brand-light/20"
+    >
+      <div class="flex items-center gap-3 w-full md:w-1/3 mb-4 md:mb-0">
+        <div
+          class="w-3 h-3 bg-brand-accent rounded-full shadow-[0_0_10px_rgba(139,157,119,0.8)]"
+        ></div>
+        <span
+          class="font-display font-bold tracking-[0.2em] uppercase text-sm text-brand-light"
+          >EL ABRA</span
+        >
+      </div>
+      <div
+        class="w-full md:w-1/3 flex justify-center gap-8 text-[10px] md:text-xs tracking-[0.2em] uppercase text-brand-light/70"
+      >
+        <a href="#modelo" class="hover:text-brand-accent transition-colors"
+          >Modelo</a
+        >
+        <a href="#ubicacion" class="hover:text-brand-accent transition-colors"
+          >Ubicación</a
+        >
+        <a href="#inversion" class="hover:text-brand-accent transition-colors"
+          >Inversión</a
+        >
+      </div>
+      <div class="w-full md:w-1/3 flex justify-end mt-4 md:mt-0">
+        <a
+          href="#contacto"
+          class="text-[10px] md:text-xs tracking-[0.2em] uppercase text-brand-light/70 hover:text-brand-accent transition-colors"
+        >
+          Contacto
+        </a>
+      </div>
+    </nav>
+    <!-- Bloque 1: Hero Section (Estilo "VISIT INDONESIA") -->
+    <header
+      class="relative min-h-screen flex flex-col justify-center px-6 md:px-12 pt-32 pb-16 overflow-hidden"
+    >
+      <!-- Imagen Real de Fondo (Sustituto de Video) -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2000&auto=format&fit=crop"
+          alt="Paisaje de bosque y montañas"
+          class="w-full h-full object-cover opacity-70 mix-blend-luminosity"
+        />
+        <!-- Gradientes para asegurar que el texto se lea perfecto -->
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-[#070A07]/80 via-[#070A07]/30 to-[#070A07]"
+        ></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-[#070A07]/50 to-transparent"
+        ></div>
+      </div>
+      <div class="relative z-10 mt-auto md:mt-20">
+        <h1
+          class="font-display font-black text-6xl md:text-8xl lg:text-[10rem] leading-[0.85] tracking-tighter uppercase mb-12 text-brand-light drop-shadow-2xl"
+        >
+          Desarrolla el <br />
+          Próximo <br />
+          Destino
+        </h1>
+        <!-- Grid de 3 columnas copiando el estilo del texto inferior en tu referencia -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-brand-light/20 pt-8 max-w-6xl"
+        >
+          <div class="pr-8">
+            <p
+              class="text-[11px] text-brand-light/80 leading-relaxed font-light"
+            >
+              <strong class="text-brand-accent uppercase block mb-1"
+                >Macrolotes Corredor Montaña</strong
+              >
+              Ubicado en el corazón del corredor turístico, El Abra es el punto
+              ideal. 3 hectáreas de propiedad privada listas para escriturar y
+              transformar.
+            </p>
+          </div>
+          <div class="pr-8">
+            <p
+              class="text-[11px] text-brand-light/80 leading-relaxed font-light"
+            >
+              <strong class="text-brand-accent uppercase block mb-1"
+                >Subdivisión Rentable</strong
+              >
+              Adquiere fracciones desde 5,000 m² y subdivide en exclusivos lotes
+              de 1,000 m² con un alto margen de retorno para cabañas de lujo.
+            </p>
+          </div>
+          <div class="flex flex-col gap-3 justify-start">
+            <a
+              href="#contacto"
+              class="text-[11px] tracking-widest uppercase text-brand-light hover:text-brand-accent transition-colors flex items-center gap-2"
+            >
+              Descargar Dossier <span class="text-brand-accent">>></span>
+            </a>
+            <a
+              href="#contacto"
+              class="text-[11px] tracking-widest uppercase text-brand-light hover:text-brand-accent transition-colors flex items-center gap-2"
+            >
+              Agendar Recorrido <span class="text-brand-accent">>></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Bloque 2: El Modelo de Negocio -->
+    <section id="modelo" class="py-24 px-6 md:px-12 bg-[#070A07] relative z-10">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2
+              class="font-display font-bold text-3xl md:text-5xl uppercase leading-tight mb-8"
+            >
+              Un Lienzo en Blanco <br />
+              <span class="text-brand-accent">para Alta Plusvalía</span>
+            </h2>
+            <p
+              class="text-brand-light/70 mb-12 text-sm leading-relaxed max-w-lg font-light"
+            >
+              El mercado actual exige espacios de descanso modernos, privados y
+              rodeados de naturaleza. Este polígono te permite capitalizar esa
+              tendencia con un modelo de negocio flexible y altamente rentable.
+            </p>
+            <div class="space-y-8">
+              <div class="border-l border-brand-accent pl-6">
+                <h3
+                  class="font-display font-bold text-sm tracking-widest text-brand-light mb-2 uppercase"
+                >
+                  Flexibilidad de Adquisición
+                </h3>
+                <p
+                  class="text-xs text-brand-light/60 leading-relaxed font-light"
+                >
+                  Compra el polígono completo (3 hectáreas) o fracciones
+                  estratégicas desde 5,000 m² (y sus múltiplos).
+                </p>
+              </div>
+              <div
+                class="border-l border-[#1F261F] pl-6 hover:border-brand-accent transition-colors"
+              >
+                <h3
+                  class="font-display font-bold text-sm tracking-widest text-brand-light mb-2 uppercase"
+                >
+                  Subdivisión Rentable
+                </h3>
+                <p
+                  class="text-xs text-brand-light/60 leading-relaxed font-light"
+                >
+                  Topografía y dimensiones ideales para lotificar desde 1,000
+                  m², tamaño perfecto para cabañas modernas.
+                </p>
+              </div>
+              <div
+                class="border-l border-[#1F261F] pl-6 hover:border-brand-accent transition-colors"
+              >
+                <h3
+                  class="font-display font-bold text-sm tracking-widest text-brand-light mb-2 uppercase"
+                >
+                  Certeza Jurídica Total
+                </h3>
+                <p
+                  class="text-xs text-brand-light/60 leading-relaxed font-light"
+                >
+                  Propiedad privada con toda la documentación en regla. Sin
+                  ejidos, sin demoras.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="relative h-[600px] w-full">
+            <img
+              src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1000&auto=format&fit=crop"
+              alt="Plano conceptual"
+              class="w-full h-full object-cover opacity-80 rounded-sm"
+            />
+            <div
+              class="absolute inset-0 border border-brand-accent/30 m-4 rounded-sm"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Bloque 3: Ubicación Logística -->
+    <section
+      id="ubicacion"
+      class="py-24 px-6 md:px-12 bg-brand-surface relative z-10 border-y border-[#1F261F]"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <p class="text-xs tracking-[0.2em] text-brand-accent uppercase mb-4">
+            Ubicación Estratégica
+          </p>
+          <h2 class="font-display font-bold text-3xl md:text-5xl uppercase">
+            Conectividad que Garantiza <br />
+            el Flujo de Compradores
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mt-16">
+          <div class="lg:col-span-5 order-2 lg:order-1">
+            <p
+              class="text-brand-light/70 mb-10 text-sm leading-relaxed font-light"
+            >
+              El éxito de un desarrollo campestre depende de su accesibilidad.
+              El Abra ofrece la desconexión que busca el mercado de la capital,
+              con la infraestructura que exige un desarrollador.
+            </p>
+            <ul class="space-y-6">
+              <li class="flex gap-4 items-start border-b border-[#1F261F] pb-4">
+                <span class="text-brand-accent text-sm mt-1">01.</span>
+                <span class="text-xs text-brand-light/80 font-light"
+                  >A un costado de la histórica Hacienda El Abra, un ancla
+                  visual y de estatus.</span
+                >
+              </li>
+              <li class="flex gap-4 items-start border-b border-[#1F261F] pb-4">
+                <span class="text-brand-accent text-sm mt-1">02.</span>
+                <span class="text-xs text-brand-light/80 font-light"
+                  >A 15 min del centro comercial y de servicios de
+                  Tulancingo.</span
+                >
+              </li>
+              <li class="flex gap-4 items-start border-b border-[#1F261F] pb-4">
+                <span class="text-brand-accent text-sm mt-1">03.</span>
+                <span class="text-xs text-brand-light/80 font-light"
+                  >A 45 min de Pachuca.</span
+                >
+              </li>
+              <li class="flex gap-4 items-start border-b border-[#1F261F] pb-4">
+                <span class="text-brand-accent text-sm mt-1">04.</span>
+                <span class="text-xs text-brand-light/80 font-light"
+                  >A menos de 2 horas de la CDMX, tu principal mercado
+                  emisor.</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="lg:col-span-7 order-1 lg:order-2 h-[500px] w-full relative"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1000&auto=format&fit=crop"
+              alt="Mapa de la zona"
+              class="w-full h-full object-cover rounded-sm grayscale opacity-60"
+            />
+            <div
+              class="absolute inset-0 bg-brand-accent/10 mix-blend-color"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Bloque 4: El Pitch de Ventas (El diseño de las 4 imágenes de Indonesia) -->
+    <section id="inversion" class="py-32 px-6 md:px-12 bg-[#070A07]">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-20">
+          <p
+            class="text-[10px] tracking-[0.2em] text-brand-light/50 uppercase mb-4"
+          >
+            ¿Por qué invertir aquí? Recomendaciones de destino
+          </p>
+          <h2
+            class="font-display font-bold text-2xl md:text-3xl tracking-widest uppercase mt-2 text-brand-light"
+          >
+            Protege y Multiplica tu Capital
+          </h2>
+        </div>
+        <!-- Grid de 4 columnas idéntico a la referencia -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
+        >
+          <!-- Card 1 -->
+          <div class="group cursor-pointer flex flex-col items-center">
+            <div
+              class="h-[400px] w-full mb-6 overflow-hidden relative border border-[#1F261F]"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=600&auto=format&fit=crop"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-700 opacity-80 group-hover:opacity-100"
+                alt="Cabaña"
+              />
+            </div>
+            <div class="text-center w-full">
+              <h3
+                class="font-display font-bold text-lg mb-1 group-hover:text-brand-accent transition-colors"
+              >
+                Boom Short-Term
+              </h3>
+              <p
+                class="text-[10px] text-brand-light/50 font-light px-2 uppercase tracking-wide"
+              >
+                Demanda premium Airbnb
+              </p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="group cursor-pointer flex flex-col items-center">
+            <div
+              class="h-[400px] w-full mb-6 overflow-hidden relative border border-[#1F261F]"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?q=80&w=600&auto=format&fit=crop"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-700 opacity-80 group-hover:opacity-100"
+                alt="Entorno"
+              />
+            </div>
+            <div class="text-center w-full">
+              <h3
+                class="font-display font-bold text-lg mb-1 group-hover:text-brand-accent transition-colors"
+              >
+                Alta Plusvalía
+              </h3>
+              <p
+                class="text-[10px] text-brand-light/50 font-light px-2 uppercase tracking-wide"
+              >
+                Crecimiento urbano acelerado
+              </p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="group cursor-pointer flex flex-col items-center">
+            <div
+              class="h-[400px] w-full mb-6 overflow-hidden relative border border-[#1F261F]"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1542224566-6e85f2e6772f?q=80&w=600&auto=format&fit=crop"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-700 opacity-80 group-hover:opacity-100"
+                alt="Vistas"
+              />
+            </div>
+            <div class="text-center w-full">
+              <h3
+                class="font-display font-bold text-lg mb-1 group-hover:text-brand-accent transition-colors"
+              >
+                Baja Densidad
+              </h3>
+              <p
+                class="text-[10px] text-brand-light/50 font-light px-2 uppercase tracking-wide"
+              >
+                Lotes de 1,000 m² - Perfil AAA
+              </p>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="group cursor-pointer flex flex-col items-center">
+            <div
+              class="h-[400px] w-full mb-6 overflow-hidden relative border border-[#1F261F]"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1587381420270-3e1a5b9e6904?q=80&w=600&auto=format&fit=crop"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-700 opacity-80 group-hover:opacity-100"
+                alt="Ecolujo"
+              />
+            </div>
+            <div class="text-center w-full">
+              <h3
+                class="font-display font-bold text-lg mb-1 group-hover:text-brand-accent transition-colors"
+              >
+                Eco-Lujo
+              </h3>
+              <p
+                class="text-[10px] text-brand-light/50 font-light px-2 uppercase tracking-wide"
+              >
+                Infraestructura sustentable
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Líneas divisorias debajo de las cards (como en la referencia) -->
+        <div class="grid grid-cols-4 gap-6 mt-12 hidden lg:grid">
+          <div class="h-[1px] bg-[#1F261F] w-2/3 mx-auto"></div>
+          <div class="h-[1px] bg-[#1F261F] w-2/3 mx-auto"></div>
+          <div class="h-[1px] bg-[#1F261F] w-2/3 mx-auto"></div>
+          <div class="h-[1px] bg-[#1F261F] w-2/3 mx-auto"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Bloque 5: Cierre Comercial (Con imagen de fondo como la referencia) -->
+    <section
+      id="contacto"
+      class="relative py-32 px-6 md:px-12 border-t border-[#1F261F] overflow-hidden"
+    >
+      <!-- Fondo de imagen abarcando todo (Como "TRAVEL AND ENJOY YOUR HOLIDAY") -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2000&auto=format&fit=crop"
+          alt="Persona en la naturaleza"
+          class="w-full h-full object-cover opacity-50"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-[#070A07] via-[#070A07]/80 to-transparent"
+        ></div>
+      </div>
+      <div class="max-w-7xl mx-auto relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div class="flex flex-col justify-center">
+            <h2
+              class="font-display font-bold text-4xl md:text-6xl lg:text-7xl uppercase leading-[0.9] mb-8 text-brand-light drop-shadow-2xl"
+            >
+              Anticípate <br />
+              al futuro <br />
+              de la zona
+            </h2>
+            <div class="flex items-center gap-4 mb-8">
+              <div
+                class="w-8 h-8 rounded-full border border-brand-accent flex items-center justify-center"
+              >
+                <svg
+                  class="w-3 h-3 text-brand-accent"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M4 4l12 6-12 6z"></path>
+                </svg>
+              </div>
+              <span
+                class="text-[10px] tracking-widest uppercase text-brand-light/80"
+                >Inicia tu proyecto hoy</span
+              >
+            </div>
+            <p
+              class="text-brand-light/70 text-xs leading-relaxed max-w-sm font-light mb-8"
+            >
+              Las fracciones con mejor frente y ubicación son las primeras en
+              colocarse. Hablemos de números, proyecciones y del potencial de tu
+              próximo desarrollo.
+            </p>
+          </div>
+          <!-- Formulario superpuesto (Emulando las fotos encimadas de la referencia) -->
+          <div class="relative w-full max-w-md ml-auto">
+            <div
+              class="bg-[#070A07]/90 backdrop-blur-xl p-8 border border-[#1F261F] shadow-2xl relative z-10"
+            >
+              <p
+                class="text-[10px] tracking-[0.2em] uppercase text-brand-accent mb-8"
+              >
+                Solicitar información técnica
+              </p>
+              <form class="space-y-6">
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Nombre completo"
+                    class="w-full bg-transparent border-b border-[#2A332A] py-3 text-xs focus:outline-none focus:border-brand-accent transition-colors text-brand-light placeholder-brand-light/30"
+                  />
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <input
+                    type="email"
+                    placeholder="Correo electrónico"
+                    class="w-full bg-transparent border-b border-[#2A332A] py-3 text-xs focus:outline-none focus:border-brand-accent transition-colors text-brand-light placeholder-brand-light/30"
+                  />
+                  <input
+                    type="tel"
+                    placeholder="Teléfono"
+                    class="w-full bg-transparent border-b border-[#2A332A] py-3 text-xs focus:outline-none focus:border-brand-accent transition-colors text-brand-light placeholder-brand-light/30"
+                  />
+                </div>
+                <button
+                  type="button"
+                  class="w-full py-4 mt-8 bg-brand-light text-brand-dark font-bold text-[10px] tracking-[0.2em] uppercase hover:bg-brand-accent transition-colors"
+                >
+                  Enviar Mensaje
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer
+      class="py-8 bg-brand-dark text-center text-[10px] text-brand-light/40 uppercase tracking-widest relative z-10 flex flex-col md:flex-row justify-center items-center gap-4"
+    >
+      <p>Macrolotes El Abra, Tulancingo.</p>
+      <div class="hidden md:block w-8 h-[1px] bg-brand-light/20"></div>
+      <p>Propiedad Privada.</p>
+    </footer>
+  </body>
+</html>
